@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте - Dark Fantasy Pokémon Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Dark Fantasy Pokémon Cards</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="cards.html">Карты</a></li>
+                    <li><a href="about.html" class="active">О проекте</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="about-section">
+                <h2>О проекте</h2>
+                <p>Проект "Dark Fantasy Pokémon Cards" представляет собой веб-сайт, который переосмысливает традиционные карты покемонов в стиле темного фэнтези. Наш сайт предлагает уникальный взгляд на мир покемонов, погружая их в мрачную, таинственную атмосферу.</p>
+                
+                <p>Сайт разработан с использованием современных веб-технологий:</p>
+                <ul>
+                    <li>HTML5 для структуры страниц</li>
+                    <li>CSS3 для стилизации в темном фэнтезийном стиле</li>
+                    <li>JavaScript для динамического взаимодействия с API</li>
+                </ul>
+                
+                <p>Все данные о картах покемонов получены с использованием открытого API TCGdex, которое предоставляет обширную информацию о картах покемонов из различных наборов.</p>
+                
+                <div class="api-info">
+                    <h3>Информация об API</h3>
+                    <p>TCGdex API - это открытый интерфейс программирования приложений, который предоставляет доступ к обширной базе данных карт покемонов на нескольких языках. API не требует аутентификации и предлагает простой способ получения информации о картах.</p>
+                    
+                    <p>Основные эндпоинты API, используемые в проекте:</p>
+                    <div class="api-endpoints">
+                        <code>GET https://www.tcgdex.net/api/v2/cards</code>
+                        <p>Получение списка всех доступных карт</p>
+                        
+                        <code>GET https://www.tcgdex.net/api/v2/cards/{id}</code>
+                        <p>Получение детальной информации о конкретной карте по её ID</p>
+                        
+                        <code>GET https://www.tcgdex.net/api/v2/sets</code>
+                        <p>Получение списка всех доступных наборов карт</p>
+                    </div>
+                    
+                    <p>Более подробную информацию об API можно найти на <a href="https://www.tcgdex.net" target="_blank">официальном сайте TCGdex</a>.</p>
+                </div>
+                
+                <p>Проект разработан в образовательных целях для демонстрации работы с API и создания стилизованных веб-интерфейсов.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Dark Fantasy Pokémon Cards. Данные предоставлены <a href="https://pokeapi.co" target="_blank">PokeAPI</a>.</p>
+            </div>
+            <section class="about-api">
+                <h2>Используемый API</h2>
+                <p>Проект использует <a href="https://pokeapi.co" target="_blank">PokeAPI</a> - бесплатный и открытый API для получения данных о покемонах.</p>
+                
+                <h3>Основные эндпоинты API:</h3>
+                <ul>
+                    <li><code>/pokemon</code> - получение списка всех покемонов</li>
+                    <li><code>/pokemon/{id}</code> - получение детальной информации о покемоне по ID</li>
+                    <li><code>/pokemon-species/{id}</code> - получение информации о виде покемона</li>
+                </ul>
+                
+                <p>Все данные о покемонах получены с использованием открытого API PokeAPI, которое предоставляет обширную информацию о покемонах, их характеристиках, способностях и изображениях.</p>
+                
+                <div class="api-info">
+                    <h3>Информация об API</h3>
+                    <p>PokeAPI - это открытый интерфейс программирования приложений, который предоставляет доступ к обширной базе данных покемонов. API не требует аутентификации и предлагает простой способ получения информации о покемонах.</p>
+                    
+                    <p>Основные эндпоинты API, используемые в проекте:</p>
+                    <div class="api-endpoints">
+                        <code>GET https://pokeapi.co/api/v2/pokemon</code>
+                        <p>Получение списка всех доступных покемонов</p>
+                        
+                        <code>GET https://pokeapi.co/api/v2/pokemon/{id}</code>
+                        <p>Получение детальной информации о конкретном покемоне по его ID</p>
+                        
+                        <code>GET https://pokeapi.co/api/v2/pokemon-species/{id}</code>
+                        <p>Получение информации о виде покемона</p>
+                    </div>
+                    
+                    <p>Более подробную информацию об API можно найти на <a href="https://pokeapi.co" target="_blank">официальном сайте PokeAPI</a>.</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

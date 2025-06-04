@@ -1,0 +1,480 @@
+/* Основные стили и сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #0a0a0f;
+    color: #d0d0d0;
+    background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    font-family: 'Pirata One', cursive;
+    color: #c9a959;
+    text-shadow: 0 0 10px rgba(201, 169, 89, 0.3);
+}
+
+/* Шапка */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a:hover, nav a.active {
+    color: #c9a959;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #c9a959;
+    transition: width 0.3s;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* Секция героя */
+.hero {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1542779283-429940ce8336?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c9a959;
+    color: #0a0a0f;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid #c9a959;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #c9a959;
+}
+
+/* Секция карт */
+.featured-cards, .cards-section {
+    margin-bottom: 40px;
+}
+
+.featured-cards h2, .cards-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #151520;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(201, 169, 89, 0.2);
+}
+
+.card-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #a0a0a0;
+    margin-bottom: 15px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #c9a959;
+}
+
+/* Детальная страница карты */
+.card-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: #151520;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-detail-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.card-detail-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-detail-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.card-detail-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    margin-bottom: 30px;
+}
+
+.card-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.card-info span {
+    color: #c9a959;
+    font-weight: bold;
+}
+
+/* Поиск и фильтры */
+.search-filters {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #151520;
+    border-radius: 10px;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #333;
+    background-color: #0a0a0f;
+    color: #d0d0d0;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Cinzel', serif;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    background-color: #c9a959;
+    color: #0a0a0f;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c9a959;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: #0a0a0f;
+    color: #d0d0d0;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-family: 'Cinzel', serif;
+}
+
+/* О проекте */
+.about-section {
+    background-color: #151520;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.api-info {
+    margin-top: 40px;
+}
+
+.api-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.api-endpoints {
+    background-color: #0a0a0f;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.api-endpoints code {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1a1a25;
+    border-left: 3px solid #c9a959;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Подвал */
+footer {
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+footer a {
+    color: #c9a959;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Загрузка */
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #c9a959;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #151520;
+    color: #d0d0d0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Cinzel', serif;
+}
+
+.pagination button:hover, .pagination button.active {
+    background-color: #c9a959;
+    color: #0a0a0f;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .card-detail {
+        flex-direction: column;
+    }
+    
+    .card-detail-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 10px 0;
+    }
+    
+    .hero {
+        height: 350px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}

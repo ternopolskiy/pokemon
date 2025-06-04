@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карты - Dark Fantasy Pokémon Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Dark Fantasy Pokémon Cards</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="cards.html" class="active">Карты</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="cards-section">
+                <h2>Коллекция карт</h2>
+                
+                <div class="search-filters">
+                    <form id="search-form">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Поиск карт по названию...">
+                            <button type="submit">Поиск</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="card-grid" id="cards-container">
+                    <!-- Карты будут загружены через JavaScript -->
+                    <div class="loading">Загрузка карт...</div>
+                </div>
+                
+                <div class="pagination">
+                    <button id="prev-page" disabled>Предыдущая</button>
+                    <button id="next-page">Следующая</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Dark Fantasy Pokémon Cards. Данные предоставлены <a href="https://pokeapi.co" target="_blank">PokeAPI</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
